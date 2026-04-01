@@ -10,6 +10,13 @@ namespace OperacoesNumero
     {
         static void Main(string[] args)
         {
+            int numero;
+
+            do
+            {
+                Console.Write("Digite um número inteiro superior a 1: ");
+                numero = int.Parse(Console.ReadLine());
+            } while (numero <= 1);
         }
     }
 }
