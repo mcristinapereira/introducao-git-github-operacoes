@@ -21,6 +21,9 @@ namespace OperacoesNumero
             Console.WriteLine($"\nTabuada de {numero}");
             Tabuada(numero);
 
+            Console.Write($"\nDivisores de {numero}: ");
+            Divisores(numero);
+
             Console.ReadKey();
         }
 
@@ -29,6 +32,15 @@ namespace OperacoesNumero
             for(int i=1; i <= 10; i++)
             {
                 Console.WriteLine($"{n} x {i} = {n * i}");
+            }
+        }
+
+        static void Divisores(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                    Console.Write($"{i} ");
             }
         }
     }
