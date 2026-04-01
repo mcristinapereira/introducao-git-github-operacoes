@@ -17,6 +17,19 @@ namespace OperacoesNumero
                 Console.Write("Digite um número inteiro superior a 1: ");
                 numero = int.Parse(Console.ReadLine());
             } while (numero <= 1);
+
+            Console.WriteLine($"\nTabuada de {numero}");
+            Tabuada(numero);
+
+            Console.ReadKey();
+        }
+
+        static void Tabuada(int n)
+        {
+            for(int i=1; i <= 10; i++)
+            {
+                Console.WriteLine($"{n} x {i} = {n * i}");
+            }
         }
     }
 }
