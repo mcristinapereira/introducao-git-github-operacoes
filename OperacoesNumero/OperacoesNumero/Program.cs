@@ -24,7 +24,10 @@ namespace OperacoesNumero
             Console.Write($"\nDivisores de {numero}: ");
             Divisores(numero);
 
-            Console.WriteLine($"\n\nO número {numero} é " + ParImpar(numero));
+            if(Par(numero))
+                Console.WriteLine($"\n\nO número {numero} é par");
+            else
+                Console.WriteLine($"\n\nO número {numero} é ímpar");
 
             Console.ReadKey();
         }
@@ -46,15 +49,13 @@ namespace OperacoesNumero
             }
         }
 
-        static string ParImpar(int n)
+        static bool Par(int n)
         {
-            string valor;
+            bool valor = false;
 
             if (n % 2 == 0)
-                valor = "par";
-            else
-                valor = "ímpar";
-
+                valor = true;
+            
             return valor;
         }
     }
